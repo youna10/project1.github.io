@@ -156,6 +156,19 @@ header{
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.containersearch{
+    margin-left: 15px;
+    font-size: 20px;
+}
+.del{
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 30px;
+}
+.containersearch:hover i,
+.del:hover{
+    font-weight: bold;
+}
 .active .search-bar-container {
     display: block; /* active 클래스가 있으면 display: block으로 보이도록 설정 */
 }
