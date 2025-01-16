@@ -1,0 +1,509 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #2a3e48;
+}
+header{
+    border: solid;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+ 
+}
+.logo {
+  width: 280px;
+  height: 75px;
+  text-align: left;
+  object-fit: cover;
+}
+.headall{
+    display: flex;
+    align-items: center;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    
+  }
+  .nav ul li{
+    right: 2%;
+    margin-right: 30px;
+  }
+  .nav ul li a{
+    text-decoration: none;
+    color: #2a3e48;
+    font-size: 15px;
+  }
+  .about ul,
+  .brand-work ul,
+  .news ul,.commuinty ul
+  {
+    width: 100%;
+    background: white;
+    padding-top: 30px;
+    z-index: 50;
+    position: absolute;
+    display: none;
+  }
+.shop .sub-menu{
+    display: none;
+}
+.about:hover ul,
+.brand-work:hover ul,
+.news:hover ul,
+.commuinty:hover ul{
+    display: block;
+    border: solid;
+}
+.about ul li,
+.brand-work ul li{
+    width: 100px;
+    text-align: left;
+}
+.news ul li,
+.commuinty ul li{
+    text-align: left;
+}
+
+
+ 
+.menu {
+    margin-right: 20px;
+}
+.menu a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
+    color: #2a3e48;
+}
+.menu a:hover i{
+    font-weight: bold;
+}
+
+
+.slideall {
+    margin:0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 480px;
+    position: relative;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* 모든 슬라이드는 기본적으로 숨겨짐 */
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-text {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+}
+
+.slide-text h2 {
+    font-size: 1.7em;
+    margin-bottom: 50px;
+}
+
+.slide-text p {
+    font-size: 1em;
+ 
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.dots {
+    position: relative;
+    text-align: center;
+}
+
+.dot {
+    z-index: 999;
+    height: 10px;
+    width: 80px;
+    margin: 0 5px;
+    background-color:rgb(113, 113, 113,0.5);
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color:  rgb(187, 187, 187,0.5) ;
+}
+.Storyall{
+    margin: 70px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.story{
+    margin: 0 15px;
+}
+.Storyall i{
+    font-size: 5rem;
+}
+.Storyall h3{
+    margin: 15px;
+    font-size: 1.8em;
+}
+.Storyall p{
+    font-size: 1em;
+}
+/*best& new*/
+.product-slider {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.product-slider h3{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.filter-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+.filter-btn.active {
+    font-weight: bold;
+}
+
+.product-container{
+    overflow: hidden;
+} 
+.products { 
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.product {
+    min-width: 33.3%;
+    width: 100%; /* 3개씩 보여주기 위한 너비 */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.product a{
+    text-decoration: none;
+}
+.product img {
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px darkgray;
+    min-width: 100%;
+    width: 210px;
+    height: auto;
+}
+.product p{
+    margin: 20px 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.product li{
+    display: flex;
+}
+.product li p{
+    margin: 0 10px;
+}
+.product li p:nth-child(3){
+    color: darkgrey;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+.prev2, .next2 {
+    position: absolute;
+    top: 57%;
+    font-size: 2em;
+    transform: translateY(-50%);
+    background:none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev2 {
+    left: -40px;
+}
+
+.next2 {
+    right: -30px;
+}
+
+
+.typecontiner{
+    margin-top: 30px;
+}
+.typecontiner h3{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.typeall{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 20px;
+}
+.type1{
+    width: 33%;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+.type1 img{
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0px 3px 8px black;
+    height: auto;
+}
+.typetext1{
+    position: absolute;
+    left: 12.5%;
+    margin-top: -220px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center; /* 텍스트 중앙 정렬 */
+   }
+.typetext2{
+    position: absolute;
+    margin-top: -220px;
+    left: 45%;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+.typetext3{
+    position: absolute;
+    margin-top: -220px;
+    left: 77.5%;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center; /
+}
+.type1:hover .typetext1 p,
+.type1:hover .typetext2 p,
+.type1:hover .typetext3 p{
+    color: #037ECD;
+    transition: all 0.3s ease-out;
+}
+
+.image-gallery {
+    margin: 0 30px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr; /* 3열로 설정 (왼쪽: 1, 가운데: 2, 오른쪽: 2) */ /* 이미지 간의 간격 */
+    
+}
+
+.image-gallery img {
+ 
+    border-radius: 8px; /* 이미지에 둥근 모서리 적용 */
+}
+.left{
+ 
+    height: auto;
+}
+.left img{
+    margin: 10px 0;
+    width:600px;
+    height: 570px;
+}
+.lefttext h3{
+    padding: 0;
+    font-size: 2em;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.lefttext p{
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+.lefttext{
+    border-radius: 8px;
+    background: rgb(255, 255, 255,0.5);
+    padding-top: 30px;
+    padding-right: 310px;
+    padding-bottom: 101px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 350px;
+    left: 2%;
+
+}
+.center-left img,
+.center-right img {
+    margin: 5px 10px;
+    width: 310px;
+    height: 280px;
+    /* 각 이미지를 50%씩 차지하게 할 수 있음 */
+}
+.centertxt{
+    border-radius: 8px;
+    background: rgb(255, 255, 255,0.5);
+    padding: 10px 20px;
+    padding-right: 35px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 170px;
+}
+ 
+.centertxt h3,
+.centertxtbottom h3,
+.righttoptxt h3,
+.rightbottom h3{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+
+}
+.centertxt p,
+.centertxtbottom p,
+.righttoptxt p,
+.rightbottom p{
+    font-weight: 500;
+}
+.centertxtbottom{
+    position: absolute;
+    display: inline-block;
+    border-radius: 8px;
+    background: rgb(255, 255, 255,0.5);
+    padding: 10px 20px;
+    padding-right: 78px;
+    margin-top: 170px;
+}
+.righttoptxt{
+    border-radius: 8px;
+    background: rgb(255, 255, 255,0.5);
+    padding: 10px 40px 30px 23px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 170px;
+   
+}
+.rightbottom{
+    position: absolute;
+    display: inline-block;
+    border-radius: 8px;
+    background: rgb(255, 255, 255,0.5);
+    padding: 10px 20px;
+    padding-right: 78px;
+    margin-top: 170px;
+}
+.right-top img,
+.right-bottom img{
+    margin: 5px 0;
+    width: 310px;
+    height: 280px;; /* 오른쪽 이미지들이 가로로 꽉 차게 함 */
+}
+footer{
+    background: #037ECD;
+    padding-top: 30px;
+    padding-bottom: 20px;
+     
+}
+footer p{
+    color: white;
+}
+.textlogo{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.fotall{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+ 
+}
+.footerone,
+.footertwo{
+    display: flex;
+    margin: 0 30px;
+}
+.onep,
+.twop{
+    
+    margin-right: 30px;
+}
+.onep p,
+.twop p{
+    margin: 20px 0;
+}
+.onep2 p,
+.twop2 p{
+    margin: 20px 0;
+}
+.footerlast{
+    margin-top: 25px;
+ 
+}
+.footerlast ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+ 
+ 
+}
+.footerlast ul li{
+    color: white;
+    margin: 0 50px;
+}
+.footerlast ul li a{
+    color: white;
+    text-decoration: none;
+ 
+}
+ 
