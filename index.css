@@ -4,86 +4,161 @@
     color: #2a3e48;
 }
 header{
-    border: solid;
-    margin: 0 15px;
+    width: 100%;
+    margin: 5px 0px 10px 0px; 
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: space-between;
  
 }
 .logo {
-  width: 280px;
-  height: 75px;
-  text-align: left;
-  object-fit: cover;
+    margin-left: 10px;
+    object-fit: cover;
 }
-.headall{
+.nav{
+     
+    height: 60px;
     display: flex;
-    align-items: center;
+    align-items:flex-end;
 }
 .nav ul {
     display: flex;
     align-items: center;
-    justify-content: center;
     list-style: none;
-    
+    float: left;
   }
   .nav ul li{
-    right: 2%;
-    margin-right: 30px;
+    margin: 0 20px;
   }
   .nav ul li a{
     text-decoration: none;
-    color: #2a3e48;
     font-size: 15px;
   }
-  .about ul,
-  .brand-work ul,
-  .news ul,.commuinty ul
-  {
-    width: 100%;
+.subnav{
+    display: none;
     background: white;
-    padding-top: 30px;
-    z-index: 50;
     position: absolute;
-    display: none;
-  }
-.shop .sub-menu{
-    display: none;
+    padding-top: 35px;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+    height: 150px;
 }
-.about:hover ul,
-.brand-work:hover ul,
-.news:hover ul,
-.commuinty:hover ul{
+.shop .subnav{
+    display: none;
+    background: white;
+    position: absolute;
+    padding-top: 35px;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+    height: 230px;
+}
+.subnav .subabout{
+    margin-left: 475px;
     display: block;
-    border: solid;
 }
-.about ul li,
-.brand-work ul li{
-    width: 100px;
-    text-align: left;
+.subnav .subbrand {
+    display: block;
+    margin-left: 42%;
 }
-.news ul li,
-.commuinty ul li{
-    text-align: left;
+.news .subnav ul{
+    display: block;
+    margin-left: 58.5%;
 }
-
-
+.commuinty .subnav ul{
+    display: block;
+    margin-left: 64.5%;
+}
+.subnav .subabout li a,
+.subnav .subbrand li a,
+.news .subnav ul li a,
+.commuinty .subnav ul li a{
+    width: 100%;
+    margin: 3px;
+    float: left;
+}
  
+.about:hover .subnav,
+.brand-work:hover .subnav,
+.news:hover .subnav,
+.commuinty:hover .subnav {
+    display: block;
+}
+.subabout li:nth-of-type(1),
+.subbrand li:nth-of-type(1),
+.shop .subnav ul li:nth-of-type(1),
+.news .subnav ul li:nth-of-type(1),
+.commuinty .subnav ul li:nth-of-type(1){
+    font-weight: bold;
+}
+.subabout li:hover  a,
+.subbrand li:hover  a,
+.shop .subnav ul li:hover a,
+.news .subnav ul li:hover a,
+.commuinty .subnav ul li:hover a  {
+    font-weight: bold;
+}
+.shop:hover .subnav{
+    display: flex;
+}
+.shop .subnav ul{
+    display: block;
+    position: relative;
+    left: 34%;
+}
+.shop .subnav ul li{
+    margin: 3px 25px;  
+} 
+.shop .subnav ul li a{
+    width: 100%;
+    text-align: left;
+}
+
 .menu {
-    margin-right: 20px;
+    margin-top: 25px;
+    margin-right: 30px;
+    
 }
 .menu a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     margin: 0 10px;
     color: #2a3e48;
+    cursor: pointer;
 }
+.menu button:hover i,
 .menu a:hover i{
     font-weight: bold;
 }
-
+.search{
+    margin: 0 10px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+.search-bar-container {
+    display: none;  
+    position: absolute;
+    top: 92px;
+    left: 29%;
+    padding: 5px 10px;
+    transform: translateX(-29%);
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 98%;
+    z-index: 999;
+}
+.search-bar {
+    width:80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.active .search-bar-container {
+    display: block; /* active 클래스가 있으면 display: block으로 보이도록 설정 */
+}
 
 .slideall {
     margin:0 30px;
@@ -157,9 +232,9 @@ header{
 
 .dot {
     z-index: 999;
-    height: 10px;
-    width: 80px;
-    margin: 0 5px;
+    height: 5px;
+    width: 75px;
+    margin: 15px 5px;
     background-color:rgb(113, 113, 113,0.5);
     border-radius: 20px;
     display: inline-block;

@@ -1,10 +1,3 @@
-function toggleSearchBar() {
-    // search-bar-container 클래스를 가진 요소를 찾음
-    const searchBarContainer = document.querySelector('.search-bar-container');
-    
-    // 요소에 active 클래스가 있을 경우, 이를 토글하여 보이게/숨기게 함
-    searchBarContainer.classList.toggle('active');
-}
  
 // JavaScript 코드 (위에 제공된 자동 슬라이드 코드)
 let slideIndex = 1;
