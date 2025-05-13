@@ -42,7 +42,7 @@ header{
     width: 100%;
     left: 0;
     z-index: 2;
-    height: 150px;
+    height: 180px;
 }
 .shop .subnav{
     display: none;
@@ -146,24 +146,26 @@ header{
     padding: 5px 10px;
     transform: translateX(-29%);
     background-color: white;
-    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     width: 98%;
     z-index: 999;
 }
 .search-bar {
     width:80%;
     padding: 8px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 .containersearch{
     margin-left: 15px;
-    font-size: 20px;
+    font-size: 23px;
 }
 .del{
     text-decoration: none;
-    margin-left: 15px;
-    font-size: 30px;
+    margin-left: 13px;
+    font-size: 23px;
 }
 .containersearch:hover i,
 .del:hover{
