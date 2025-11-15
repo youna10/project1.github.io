@@ -280,35 +280,43 @@ header{
 .Storyall p{
     font-size: 1em;
 }
+
 /*best& new*/
 .product-slider {
-    position: relative;
     width: 90%;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 85px;
 }
 .product-slider h3{
+    
     text-align: center;
     display: flex;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 40px;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 .buttons {
+  
     text-align: center;
     margin-bottom: 20px;
 }
 .filter-btn {
-    padding: 10px 20px;
+    color: rgb(42, 62, 72,0.5);
+    padding: 10px 7px;
     font-size: 20px;
     cursor: pointer;
     background: none;
     border: none;
-    margin: 0 10px;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin: 0 5px;
     transition: background-color 0.3s;
 }
 .filter-btn.active {
-    font-weight: bold;
+  
+    color: #2a3e48;
+ 
 }
 
 .product-container{
@@ -320,100 +328,104 @@ header{
 }
 
 .product {
-    min-width: 33.3%;
-    width: 100%; /* 3개씩 보여주기 위한 너비 */
-    padding: 0 20px;
+     
+    min-width: 25%;
+    width: 85%; /* 3개씩 보여주기 위한 너비 */
     box-sizing: border-box;
+    
 }
 .product a{
     text-decoration: none;
+    margin-left: 30px;
 }
 .product img {
-    border-radius: 20px;
-    box-shadow: 0px 2px 5px darkgray;
-    min-width: 100%;
-    width: 210px;
+    min-width: 85%;
+    width: 200px;
     height: auto;
 }
-.product p{
-    margin: 20px 10px;
-    font-size: 17px;
-    font-weight: bold;
+.productname{
+    margin:30px 0px 45px 30px;
+    font-size: 15px;
+    height: 50px;
+    
+}
+.prdmoney{
+    margin-bottom: 5px;
+    color: darkgrey;
+    text-decoration: line-through;
 }
 .product li{
     display: flex;
+    margin-left: 30px;
 }
-.product li p{
-    margin: 0 10px;
+.price-box p:nth-child(1){
+    margin-right: 8px;
+    color: #4BB9FF;
+    font-weight: bold;
 }
-.product li p:nth-child(3){
-    color: darkgrey;
-    font-weight: normal;
-    text-decoration: line-through;
+.productbtn{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    
 }
-.prev2, .next2 {
-    position: absolute;
-    top: 57%;
-    font-size: 2em;
-    transform: translateY(-50%);
-    background:none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+ 
+.new-products{
+    margin-bottom: 21px;
 }
-
-.prev2 {
-    left: -40px;
-}
-
-.next2 {
-    right: -30px;
-}
-
 
 .typecontiner{
-    margin-top: 30px;
+    margin-top: 80px;
 }
 .typecontiner h3{
     text-align: center;
     display: flex;
     justify-content: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
 }
 .typeall{
     display: flex;
     justify-content: center;
     text-align: center;
+    gap: 35px;
     margin: 0 20px;
 }
 .type1{
-    width: 33%;
-    margin: 0 10px;
-    border-radius: 20px;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    display: block;
+    overflow: hidden;
 }
+ 
 .type1 img{
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 0px 3px 8px black;
-    height: auto;
+    width:  350px;
+    height: 350px;
+    border-radius: 100%;
 }
-.typetext1{
-    position: absolute;
-    left: 12.5%;
-    margin-top: -220px;
-    font-size: 23px;
-    font-weight: 600;
-    text-align: center; /* 텍스트 중앙 정렬 */
-   }
-.typetext2{
-    position: absolute;
-    margin-top: -220px;
-    left: 45%;
-    font-size: 23px;
-    font-weight: 600;
-    text-align: center; /* 텍스트 중앙 정렬 */
+.type1 a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
 }
+.type1 P{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 1;
+ 
+}
+
 .typetext3{
     position: absolute;
     margin-top: -220px;
@@ -422,119 +434,120 @@ header{
     font-weight: 600;
     text-align: center; /
 }
-.type1:hover .typetext1 p,
-.type1:hover .typetext2 p,
-.type1:hover .typetext3 p{
+.type1:hover p{
     color: #037ECD;
     transition: all 0.3s ease-out;
 }
 
 .image-gallery {
-    margin: 0 30px;
+    margin: auto;
+    padding: auto;
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr; /* 3열로 설정 (왼쪽: 1, 가운데: 2, 오른쪽: 2) */ /* 이미지 간의 간격 */
-    
-}
 
-.image-gallery img {
- 
-    border-radius: 8px; /* 이미지에 둥근 모서리 적용 */
 }
-.left{
  
-    height: auto;
+.left{
+    position: relative;
+    margin-left: 25px;
+    width:640px;
+    height: 600px;
 }
 .left img{
-    margin: 10px 0;
-    width:600px;
-    height: 570px;
+   width: 100%;
+   height: 100%;
+ 
 }
 .lefttext h3{
     padding: 0;
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-top: 50px;
     margin-left: 20px;
     margin-bottom: 30px;
 }
 .lefttext p{
-    font-size: 1.2em;
+    font-size: 1em;
     margin-left: 20px;
 }
 .lefttext{
-    border-radius: 8px;
-    background: rgb(255, 255, 255,0.5);
-    padding-top: 30px;
-    padding-right: 310px;
-    padding-bottom: 101px;
-    display: inline-block;
     position: absolute;
-    margin-top: 350px;
-    left: 2%;
+    background: rgb(217, 217, 217,0.5);
+    display: inline-block;
+    bottom: 0%;
+    width: 100%;
+    height: 40%;
+    
 
+}
+.center,.right{
+    margin: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+}
+.center-left{
+    margin-bottom: 10px;
+}
+.center-left,
+.center-right,
+.right-top,
+.right-bottom{
+    position: relative;
+}
+.center-left,
+.center-right{
+    width: 310px;
+    height: 295px; 
+      
 }
 .center-left img,
 .center-right img {
-    margin: 5px 10px;
-    width: 310px;
-    height: 280px;
+    width: 100%;
+    height: 100%;
     /* 각 이미지를 50%씩 차지하게 할 수 있음 */
 }
-.centertxt{
-    border-radius: 8px;
-    background: rgb(255, 255, 255,0.5);
-    padding: 10px 20px;
-    padding-right: 35px;
-    display: inline-block;
+.right{
+    margin-right: 30px;
+}
+.right-top,
+.right-bottom{
+    width: 310px;
+    height: 295px;
+}
+.right-top{
+    margin-bottom: 10px;
+}
+.right-top img,
+.right-bottom img{
+    width: 100%;
+    height: 100%;; /* 오른쪽 이미지들이 가로로 꽉 차게 함 */
+}
+.centertxt,
+.centertxtbottom,
+.righttoptxt,
+.rightbottom{
     position: absolute;
-    margin-top: 170px;
+    background: rgb(217, 217, 217,0.5);
+    display: inline-block;
+    width: 100%;
+    height: 40%;
+    bottom: 0%;
+    
 }
  
 .centertxt h3,
 .centertxtbottom h3,
 .righttoptxt h3,
 .rightbottom h3{
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: 10px;
 
 }
 .centertxt p,
 .centertxtbottom p,
 .righttoptxt p,
 .rightbottom p{
-    font-weight: 500;
-}
-.centertxtbottom{
-    position: absolute;
-    display: inline-block;
-    border-radius: 8px;
-    background: rgb(255, 255, 255,0.5);
-    padding: 10px 20px;
-    padding-right: 78px;
-    margin-top: 170px;
-}
-.righttoptxt{
-    border-radius: 8px;
-    background: rgb(255, 255, 255,0.5);
-    padding: 10px 40px 30px 23px;
-    display: inline-block;
-    position: absolute;
-    margin-top: 170px;
-   
-}
-.rightbottom{
-    position: absolute;
-    display: inline-block;
-    border-radius: 8px;
-    background: rgb(255, 255, 255,0.5);
-    padding: 10px 20px;
-    padding-right: 78px;
-    margin-top: 170px;
-}
-.right-top img,
-.right-bottom img{
-    margin: 5px 0;
-    width: 310px;
-    height: 280px;; /* 오른쪽 이미지들이 가로로 꽉 차게 함 */
+    margin-left: 10px;
 }
 footer{
     background: #037ECD;
@@ -551,7 +564,7 @@ footer p{
     color: white;
 }
 .fotall{
-    margin: 20px 0;
+    margin: 18px 0;
     display: flex;
     justify-content: center;
     text-align: left;
@@ -590,10 +603,16 @@ footer p{
 .footerlast ul li{
     color: white;
     margin: 0 50px;
+    list-style: none;
 }
 .footerlast ul li a{
     color: white;
-    text-decoration: none;
- 
+    text-decoration: none; 
 }
- 
+.hrhr{
+    margin: 0 50px;
+    border: 0;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+}

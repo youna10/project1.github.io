@@ -50,8 +50,6 @@ setInterval(function() {
 // 버튼과 슬라이드 요소 선택
 const bestBtn = document.getElementById('best-btn');
 const newBtn = document.getElementById('new-btn');
-const prevBtns2 = document.getElementById('prev2-btn');
-const nextBtns2 = document.getElementById('next2-btn');
 const bestProducts = document.querySelector('.best-products');
 const newProducts = document.querySelector('.new-products');
 
@@ -64,20 +62,16 @@ let currentProductList = bestProducts; // 초기에는 Best 상품이 보이도�
 bestBtn.addEventListener('click', () => {
     bestBtn.classList.add('active');
     newBtn.classList.remove('active');
-    currentProductList = bestProducts;
-    currentSlide2 = 0; // 슬라이드 초기화
-    totalSlides = 4; // Best 상품 슬라이드 개수
+ 
     updateSlide();
-    newProducts.style.display = 'none'; // New 상품 숨기기
+    newProducts.style.display = 'none'; // Ne품 숨기기
     bestProducts.style.display = 'flex'; // Best 상품 보이기
 });
 
 newBtn.addEventListener('click', () => {
     newBtn.classList.add('active');
     bestBtn.classList.remove('active');
-    currentProductList = newProducts;
-    currentSlide2 = 0; // 슬라이드 초기화
-    totalSlides = 3; // New 상품 슬라이드 개수
+ 
     updateSlide();
     bestProducts.style.display = 'none'; // Best 상품 숨기기
     newProducts.style.display = 'flex'; // New 상품 보이기
